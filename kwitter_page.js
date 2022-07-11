@@ -1,14 +1,15 @@
 //YOUR FIREBASE LINKS
 var firebaseConfig = {
-      apiKey: "AIzaSyB7eqCCMI5xjckwull8tn52oihCDK4LNYw",
-      authDomain: "kwitter-19b19.firebaseapp.com",
-      databaseURL: "https://kwitter-19b19-default-rtdb.firebaseio.com",
-      projectId: "kwitter-19b19",
-      storageBucket: "kwitter-19b19.appspot.com",
-      messagingSenderId: "74458220368",
-      appId: "1:74458220368:web:b5ae37039f068aac6a0e55"
+      apiKey: "AIzaSyBpw-wOk3lG6QYszpe0RtjNl1qtrmjfRm8",
+      authDomain: "kwitter-d6d6f.firebaseapp.com",
+      databaseURL: "https://kwitter-d6d6f-default-rtdb.firebaseio.com",
+      projectId: "kwitter-d6d6f",
+      storageBucket: "kwitter-d6d6f.appspot.com",
+      messagingSenderId: "577986961883",
+      appId: "1:577986961883:web:5be2ac9354fb337a07c7fe"
     };
-// Initialize Firebase
+    
+    // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 user_name = localStorage.getItem("user_name");
 room_name = localStorage.getItem("room_name");
@@ -35,8 +36,8 @@ function getData() {
                         like = message_data['like'];
                         name_with_tag = "<h4>" + name + "<img class='user_tick' src='tick.png'></h4>";
                         like_button = "<button class='btn btn-warning' id=" + firebase_message_id + " value=" + like + " onclick='updatelike(this.id)'>";
-                        span_with_tag = "<span class='glyphicon glyphicon-thumbs-up'>like: " + like + "-/span></button><hr>";
-                        row = name_with_tag + name_with_tag + like_button + span_with_tag;
+                        span_with_tag = "<span class='glyphicon glyphicon-thumbs-up'>like: " + like + "</span></button><hr>";
+                        row = name_with_tag + message + like_button + span_with_tag;
                         document.getElementById("output").innerHTML += row;
                         //End code
                   }
